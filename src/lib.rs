@@ -1,7 +1,7 @@
 extern crate proc_macro;
 use proc_macro::TokenStream;
 use quote::quote;
-use syn::{parse_macro_input, LitStr};
+use syn::{LitStr, parse_macro_input};
 
 #[proc_macro]
 pub fn color(input: TokenStream) -> TokenStream {
@@ -33,7 +33,6 @@ pub fn color(input: TokenStream) -> TokenStream {
 
     result.into()
 }
-
 
 #[proc_macro]
 pub fn svg_handle(input: TokenStream) -> TokenStream {
